@@ -15,7 +15,25 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
   1. Install terraform & setup provider
   2. Configure python venv and install dependencies (`pip install fastapi uvicorn web3 psycopg2-binary`)
 
+## Next steps:
+1. Write Terraform scripts for:
+    - Provisioning a PostgreSQL database (or RDS instance) -> **TBD**
+    - Deploying an EC2 instance for hosting your backend.
+    - Setting up storage for logs or exported reports (e.g., S3 buckets).
 
+Example Terraform for PostgreSQL database:
+```
+resource "aws_db_instance" "crypto_db" {
+  allocated_storage = 20
+  engine            = "postgres"
+  engine_version    = "13"
+  instance_class    = "db.t2.micro"
+  name              = "crypto_accounting"
+  username          = "admin"
+  password          = "secure_password"
+  parameter_group_name = "default.postgres13"
+}
+```
 
 --- 
 
