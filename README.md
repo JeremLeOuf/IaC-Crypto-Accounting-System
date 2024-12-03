@@ -10,7 +10,8 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 
 - Python
   - Framework: [FastAPI](https://fastapi.tiangolo.com/)
-  - Blockchain API: [web3.py](https://web3py.readthedocs.io/en/stable/), [BitQuery](https://docs.bitquery.io/docs/intro/) CoinGecko, Binance, CoinMarketCap, EtherScan...
+  - Blockchain API: [web3.py](https://web3py.readthedocs.io/en/stable/), [BitQuery](https://docs.bitquery.io/docs/intro/) 
+    - Other options: CoinGecko, Binance, CoinMarketCap, EtherScan...
 
 ## Frontend
 
@@ -28,13 +29,13 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
   - Cloud services (AWS, Azure, GCP)
   - Databases (RDS for PostgreSQL)
   - Compute instances (EC2 / Lambda for serverless - dedicated to lightweight tasks)
-- CI/CD: **GitHub Actions**
-- Containerization: **Docker**
+- CI/CD: [GitHub Actions](https://github.com/features/actions)
+- Containerization: [Docker](https://www.docker.com/)
 
 ## Blockchain integration
 
 - **ETH, BSC, Polygon...** TBC
-- APIs from **Alchemy / Infura**
+- APIs from [Alchemy](https://www.alchemy.com/) / [Infura](https://www.infura.io/)
 
 ## Cloud
 
