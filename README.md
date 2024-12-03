@@ -3,6 +3,39 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 
 ---
 
+# Tech Stack:
+## Backend:
+- Python
+  - Framework: **FastAPI**
+  - Blockchain API: `web3.py`, CoinGecko, Binance, CoinMarketCap, EtherScan...
+
+## Frontend: 
+- Framework: **React.js**
+- Design Library: **TailwindCSS / Bootstrap**
+
+## Database: 
+- Relational: **PostgreSQL**
+- NoSQL: **MongoDB**
+
+## Infrastructure & Automation:
+- IaC: **Terraform** to provision:
+  - Cloud services (AWS, Azure, GCP)
+  - Databases (RDS for PostgreSQL)
+  - Compute instances (EC2 / Lambda for serverless - dedicated to lightweight tasks)
+- CI/CD: **GitHub Actions**
+- Containerization: **Docker**
+
+## Blockchain integration: 
+- **ETH, BSC, Polygon...** TBC
+- APIs from **Alchemy / Infura**
+
+## Cloud:
+- **AWS** (integrates with Terraform, robust set of services for data / compute resources)
+
+## APIs:
+- **ElectricityMaps:** for integration carbon-aware infrastructure for future scaling
+- Accounting APIs: e.g. **Ledger Python**
+
 # ToDos:
 ## Core Features:
   1. Authentication / profile management -> likely just by entering public crypto address <> blockchain API
@@ -12,8 +45,8 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
   5. Export financial data for tax purposes (CSV/Excel).
 
 ## Setup dev environment:
-  1. Install terraform & setup provider
-  2. Configure python venv and install dependencies (`pip install fastapi uvicorn web3 psycopg2-binary`)
+  1. Install **Terraform** & setup provider
+  2. Configure python `venv` and install dependencies (`pip install fastapi uvicorn web3 psycopg2-binary`)
 
 ## Next steps:
 1. Write Terraform scripts for:
