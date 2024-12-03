@@ -9,13 +9,13 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 ## Backend
 
 - Python
-  - Framework: **FastAPI**
-  - Blockchain API: `web3.py`, CoinGecko, Binance, CoinMarketCap, EtherScan...
+  - Framework: [FastAPI](https://fastapi.tiangolo.com/)
+  - Blockchain API: [web3.py](https://web3py.readthedocs.io/en/stable/), [BitQuery](https://docs.bitquery.io/docs/intro/) CoinGecko, Binance, CoinMarketCap, EtherScan...
 
 ## Frontend
 
-- Framework: **React.js**
-- Design Library: **TailwindCSS / Bootstrap**
+- Framework: [React.js](https://react.dev/)
+- Design Library: [Bootstrap](https://getbootstrap.com/)
 
 ## Database
 
@@ -24,7 +24,7 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 
 ## Infrastructure & Automation
 
-- IaC: **Terraform** to provision:
+- IaC: [Terraform](https://www.terraform.io/) to provision:
   - Cloud services (AWS, Azure, GCP)
   - Databases (RDS for PostgreSQL)
   - Compute instances (EC2 / Lambda for serverless - dedicated to lightweight tasks)
@@ -42,8 +42,8 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 
 ## APIs
 
-- **ElectricityMaps:** for integration carbon-aware infrastructure for future scaling
-- Accounting APIs: e.g. **Ledger Python**
+- [ElectricityMaps](https://app.electricitymaps.com/map) for integration carbon-aware infrastructure for future scaling
+- Accounting APIs: e.g. [Ledger Python](https://github.com/mafm/ledger.py)
 
 # ToDos
 
