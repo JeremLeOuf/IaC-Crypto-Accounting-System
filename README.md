@@ -14,3 +14,17 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 ## Setup dev environment:
   1. Install terraform & setup provider
   2. Configure python venv and install dependencies (`pip install fastapi uvicorn web3 psycopg2-binary`)
+
+
+
+--- 
+
+Steps taken:
+1. Create git repo (https://github.com/JeremLeOuf/IaC-Crypto-Accounting-System)
+2. Clone in VSCode
+3. Upgrade `pip` and install `virtualenv`
+4. Create virtual environment "CryptoAccounting" `virtualenv CryptoAccounting`
+5. Activate it: `source CryptoAccounting/bin/activate`
+6. Create a `requirements.txt` file in the root of the project folder with the following dependencies: `fastapi uvicorn web3 psycopg2-binary`
+7. Install them: `pip install -r requirements.txt`
+8. Check if everything is there: `pip list`
