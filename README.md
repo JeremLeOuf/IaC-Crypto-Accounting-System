@@ -4,13 +4,13 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 
 ---
 
-# Tech Stack
+1. Tech Stack
 
 ## Backend
 
 - Python
   - Framework: [FastAPI](https://fastapi.tiangolo.com/)
-  - Blockchain API: [web3.py](https://web3py.readthedocs.io/en/stable/), [BitQuery](https://docs.bitquery.io/docs/intro/) 
+  - Blockchain API: [web3.py](https://web3py.readthedocs.io/en/stable/), [BitQuery](https://docs.bitquery.io/docs/intro/)
     - Other options: CoinGecko, Binance, CoinMarketCap, EtherScan...
 
 ## Frontend
@@ -46,9 +46,9 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 - [ElectricityMaps](https://app.electricitymaps.com/map) for integration carbon-aware infrastructure for future scaling
 - Accounting APIs: e.g. [Ledger Python](https://github.com/mafm/ledger.py)
 
-# ToDos
+## ToDos
 
-## Core Features
+### Core Features
 
   1. Authentication / profile management -> likely just by entering public crypto address <> blockchain API
   2. Fetch balances & transactions via blockchain APIs
@@ -56,12 +56,12 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
   4. Generate reports: Calculate income, expenses, and profit based on crypto prices.
   5. Export financial data for tax purposes (CSV/Excel).
 
-## Setup dev environment
+### Setup dev environment
 
   1. Install **Terraform** & setup provider
   2. Configure python `venv` and install dependencies (`pip install fastapi uvicorn web3 psycopg2-binary`)
 
-## Next steps
+### Next steps
 
 1. Write Terraform scripts for:
     - Provisioning a PostgreSQL database (or RDS instance) -> **TBD**
@@ -70,7 +70,7 @@ Final project for my Master's thesis at HTW Berlin - "Building a dynamic carbon-
 
 Example Terraform for PostgreSQL database:
 
-```
+```tf
 resource "aws_db_instance" "crypto_db" {
   allocated_storage = 20
   engine            = "postgres"
@@ -92,26 +92,19 @@ Steps taken:
 3. Install `pip` and install `virtualenv`
 4. Create virtual environment "CryptoAccounting" `virtualenv CryptoCompta`
 5. Activate it: `CryptoCompta/bin/activate`
-6. Create a `requirements.txt` file in the root of the project folder with the following dependencies: `fastapi uvicorn web3 psycopg2-binary` ##TO CORRECT##
-7. Install them: `pip install -r requirements.txt` > After activating venv
-8. Check if everything is there: `pip list`
-9. Install Terraform:
 
-```sh
-sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+2.1. Dev Environment setup: `source setup.sh` :
 
-wget -O- https://apt.releases.hashicorp.com/gpg | \
-gpg --dearmor | \
-sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-gpg --no-default-keyring \
---keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
---fingerprint
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+- Install pip, git, unzip
+- Create CryptoCompta virtualenv and activate it
+- Install requirements
+- Install AWS CLI
+- Init terraform
+- Keep the session alive with the activate virtualenv
 
-sudo tee /etc/apt/sources.list.d/hashicorp.list && sudo apt update && sudo apt-get install terraform
+_6. Create a `requirements.txt` file in the root of the project folder with the following dependencies: `fastapi uvicorn web3 psycopg2-binary` **TO CORRECT**_
 
-# Enable tab completion:
-touch ~/.bashrc
-terraform -install-autocomplete
-```
+- Install them: `pip install -r requirements.txt` > After activating venv
+  Should be done only on the production machine
+
+- Install Terraform: `sh install_terraform.sh`
