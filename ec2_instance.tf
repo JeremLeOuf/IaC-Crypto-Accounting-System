@@ -1,5 +1,5 @@
 resource "aws_instance" "ec2_instance" {
-  ami           = "ami-0036618782d3fe37e"
+  ami           = var.ec2_ami_id
   instance_type = "t2.micro"
   key_name      = var.ec2_key_name
   
