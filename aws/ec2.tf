@@ -10,10 +10,10 @@ terraform {
 }
 
 provider "aws" {
-  region  = "eu-north-1" # Stockholm
+  region = "eu-north-1" # Stockholm
 }
 
-resource "aws_instance" "app_server" {
+resource "aws_instance" "CryptoCompta_EC2" {
   ami           = "ami-0036618782d3fe37e"
   instance_type = "t3.micro"
 
