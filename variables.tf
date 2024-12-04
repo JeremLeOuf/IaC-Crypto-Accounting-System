@@ -13,6 +13,7 @@ variable "ec2_instance_type" {
 variable "db_name" {
   description = "The name of the database"
   type        = string
+  default     = CryptoComptaDB
 }
 
 variable "db_username" {
