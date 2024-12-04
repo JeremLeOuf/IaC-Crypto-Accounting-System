@@ -4,10 +4,28 @@ variable "ec2_ami_id" {
   default     = "ami-0036618782d3fe37e" # My desired AMI
 }
 
+variable "aws_region" {
+  description = "Region to deploy AWS resources"
+  type        = string
+  default     = "eu-north-1"
+}
+
+variable "instance_name" {
+  description = "Name of the EC2 instance"
+  type        = string
+  default     = "CryptoCompta_EC2"
+}
+
 variable "instance_type" {
   description = "Instance type for EC2"
   type        = string
   default     = "t3.micro" # Free tier eligible
+}
+
+variable "ec2_key_name" {
+  description = "Key pair name for EC2 SSH access"
+  type        = string
+  default     = "CryptoCompta"
 }
 
 variable "db_username" {
@@ -19,7 +37,7 @@ variable "db_username" {
 variable "db_password" {
   description = "The password for the database"
   type        = string
-  default     = "1234567890"
+  default     = "WyVF7ykwCzAwwgR"
 }
 
 variable "db_name" {
@@ -28,8 +46,3 @@ variable "db_name" {
   default     = "cryptocompta"
 }
 
-variable "ec2_key_name" {
-  description = "Key pair name for EC2 SSH access"
-  type        = string
-  default     = "CryptoCompta"
-}
