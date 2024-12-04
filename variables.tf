@@ -10,7 +10,23 @@ variable "ec2_instance_type" {
   default     = "t3.micro" # Free tier eligible
 }
 
+variable "db_name" {
+  description = "The name of the database"
+  type        = string
+}
+
+variable "db_username" {
+  description = "The username for the database"
+  type        = string
+}
+
+variable "db_password" {
+  description = "The password for the database"
+  type        = string
+}
+
 variable "ec2_key_name" {
   description = "Key pair name for EC2 SSH access"
   type        = string
+  default     = "CrytoComptaKey"
 }
