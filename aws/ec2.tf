@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-north-1" # Stockholm
+  region = var.aws_region # Stockholm
 }
 
 resource "aws_instance" "CryptoCompta_EC2" {
@@ -18,6 +18,6 @@ resource "aws_instance" "CryptoCompta_EC2" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "CryptoCompta_EC2"
+    Name = var.instance_name
   }
 }
