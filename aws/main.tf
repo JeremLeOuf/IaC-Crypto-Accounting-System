@@ -1,11 +1,4 @@
 terraform {
-  cloud {
-    organization = "CryptoCompta_HTW"
-    workspaces {
-      name = "IaC-Crypto-Accounting-System"
-    }
-  }
-
   required_providers {
     aws = {
       source  = "hashicorp/aws"
