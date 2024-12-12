@@ -2,7 +2,7 @@
 
 # Install dependencies
 sudo apt update
-sudo apt install python3-pip git unzip -y
+sudo apt install python3-pip git unzip dos2unix -y
 
 # Create and activate the virtual environment
 if [ ! -d "CryptoCompta" ]; then
@@ -26,7 +26,7 @@ if [ ! -d "aws" ]; then
   rm awscliv2.zip
 fi
 
-source install_scripts/terraform_install.sh
+dos2unix ./install_scripts/install_terraform.sh
 
 cd aws 
 
